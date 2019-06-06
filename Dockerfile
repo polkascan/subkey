@@ -34,11 +34,11 @@ COPY --from=builder /rustbuilder/substrate/target/$PROFILE/subkey /usr/local/bin
 RUN mv /usr/share/ca* /tmp && \
 	rm -rf /usr/share/*  && \
 	mv /tmp/ca-certificates /usr/share/ && \
-	rm -rf /usr/lib/python* && \
+	rm -rf /usr/lib/python*
 RUN	rm -rf /usr/bin /usr/sbin
 
 # FINAL PREPARATIONS
 WORKDIR /usr/local/bin
 ENTRYPOINT ["subkey"]
-CMD [" --help"]
+CMD ["--help"]
 # ===== END SECOND STAGE ======
