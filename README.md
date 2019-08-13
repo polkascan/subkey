@@ -1,16 +1,16 @@
-# Polkasource Substrate Subkey
-Polkasource Dockerfile for Substrate Subkey
+# Polkasource Subkey
+Polkasource Dockerfile for Subkey
 Subkey is a commandline utility included with Substrate that generates or restores Substrate keys. 
 
 ## Building Substrate Subkey
 Clone repository
 ```bash
-git clone https://github.com/polkasource/substrate-subkey.git
+git clone https://github.com/polkasource/subkey.git
 ```
 
 Change directory
 ```bash
-cd substrate-subkey
+cd subkey
 ```
 
 Check available releases
@@ -23,23 +23,23 @@ Checkout a particular release (v2.0.0)
 git checkout v2.0.0
 ```
 
-Build Substrate Subkey (v2.0.0)
+Build Subkey (v2.0.0)
 ```bash
-docker build -t 'polkasource/substrate-subkey:v2.0.0' .
+docker build -t 'polkasource/subkey:v2.0.0' .
 ```
 
-## Running Substrate Subkey
+## Running Subkey
 Run Substrate Subkey Help (v2.0.0)
 ```bash
-docker run -it --rm 'polkasource/substrate-subkey:v2.0.0'
+docker run -it --rm 'polkasource/subkey:v2.0.0'
 ```
 
 Generate a sr25519 key (v2.0.0)
 ```bash
-docker run -it --rm 'polkasource/substrate-subkey:v2.0.0' generate
+docker run -it --rm 'polkasource/subkey:v2.0.0' generate
 ```
 
 Generate a ed25519 key (v2.0.0)
 ```bash
-docker run -it --rm 'polkasource/substrate-subkey:v2.0.0' -e generate
+docker run -it --rm 'polkasource/subkey:v2.0.0' -e generate
 ```
