@@ -25,7 +25,7 @@ RUN RUSTUP_TOOLCHAIN=stable cargo install --git https://github.com/alexcrichton/
 
 # BUILD RUNTIME AND BINARY
 RUN rustup target add wasm32-unknown-unknown --toolchain nightly
-RUN cd /rustbuilder/substrate/bin/utils/subkey && RUSTUP_TOOLCHAIN=stable cargo build -p subkey --$PROFILE
+RUN cd /rustbuilder/substrate && RUSTUP_TOOLCHAIN=stable cargo build -p subkey --$PROFILE
 # ===== END FIRST STAGE ======
 
 # ===== START SECOND STAGE ======
